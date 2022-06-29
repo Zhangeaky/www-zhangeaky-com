@@ -7,5 +7,10 @@
 
     <bean id="sampleService" class="com.zhangeaky.application.web.SampleService"></bean>
 
+    <bean id="defaultMQPushConsuemr" class="org.apache.rocketmq.client.consumer.DefaultMQPushConsumer">
+        <property name="consumerGroup" value="application_consumer"/>
+        <property name="namesrvAddr" value="127.0.0.1:9876"/>
+    </bean>
+
 
 </beans>
